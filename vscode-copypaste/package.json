@@ -1,0 +1,116 @@
+{
+  "name": "vscode-copypaste",
+  "displayName": "Advanced Copy Paste",
+  "description": "Advanced copy paste extension with multiple data structure support (Array, Stack, Queue)",
+  "version": "0.0.1",
+  "publisher": "vscode-copypaste",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fleet2005/vscode-copypaste.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-copypaste.copy",
+        "title": "Advanced Copy"
+      },
+      {
+        "command": "vscode-copypaste.paste",
+        "title": "Advanced Paste"
+      },
+      {
+        "command": "vscode-copypaste.displayContent",
+        "title": "Display Content"
+      },
+      {
+        "command": "vscode-copypaste.switchDataStructure",
+        "title": "Switch Data Structure"
+      },
+      {
+        "command": "vscode-copypaste.clearContent",
+        "title": "Clear Content"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "vscode-copypaste.copy",
+        "key": "ctrl+c",
+        "mac": "cmd+c",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "vscode-copypaste.paste",
+        "key": "ctrl+v",
+        "mac": "cmd+v",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "vscode-copypaste.displayContent",
+        "key": "ctrl+0",
+        "mac": "cmd+0",
+        "args": { "index": 0 }
+      },
+      {
+        "command": "vscode-copypaste.displayContent",
+        "key": "ctrl+1",
+        "mac": "cmd+1",
+        "args": { "index": 1 }
+      },
+      {
+        "command": "vscode-copypaste.displayContent",
+        "key": "ctrl+2",
+        "mac": "cmd+2",
+        "args": { "index": 2 }
+      },
+      {
+        "command": "vscode-copypaste.switchDataStructure",
+        "key": "ctrl+4",
+        "mac": "cmd+4"
+      },
+      {
+        "command": "vscode-copypaste.clearContent",
+        "key": "ctrl+5",
+        "mac": "cmd+5"
+      }
+    ],
+    "configuration": {
+      "title": "Advanced Copy Paste",
+      "properties": {
+        "vscode-copypaste.dataStructure": {
+          "type": "string",
+          "enum": ["array", "stack", "queue"],
+          "default": "array",
+          "description": "Choose the data structure to use for storage"
+        },
+        "vscode-copypaste.maxArraySize": {
+          "type": "number",
+          "default": 3,
+          "description": "Maximum size for array storage"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./.vscode-test.mjs"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "eslint": "^8.56.0",
+    "glob": "^10.3.10",
+    "mocha": "^10.2.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-electron": "^2.3.8"
+  }
+}
