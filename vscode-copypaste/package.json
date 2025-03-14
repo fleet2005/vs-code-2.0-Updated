@@ -1,9 +1,9 @@
 {
-  "name": "vscode-copypaste",
-  "displayName": "Advanced Copy Paste",
+  "name": "advanced-copypaste-ext",
+  "displayName": "Advanced Copy Paste Pro",
   "description": "Advanced copy paste extension with multiple data structure support (Array, Stack, Queue)",
   "version": "0.0.1",
-  "publisher": "vscode-copypaste",
+  "publisher": "Vishal-Srinivasan",
   "repository": {
     "type": "git",
     "url": "https://github.com/fleet2005/vscode-copypaste.git"
