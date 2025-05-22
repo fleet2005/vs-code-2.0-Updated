@@ -2,6 +2,10 @@
 
 A powerful VS Code extension that enhances your copy-paste experience with multiple data structure support. Store and manage your clipboard content using arrays, stacks, or queues.
 
+# Author
+Vishal Srinivasan
+vishalsrinivasancontact@gmail.com 
+
 ## Features
 
 - Multiple data structure support:
